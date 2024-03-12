@@ -1,0 +1,29 @@
+{% extends 'aplicacionDjango/index.html' %}
+
+
+{% block titulo %}
+
+    <h1 class="mb-5">COMPRADOR(Registro)</h1>
+    <h3>Registrese llenando el formulario que se encuentra a continuación</h3>
+
+{% endblock titulo %}
+
+
+{% block contenido %}
+
+
+
+<form action="" method="post"> 
+    {% csrf_token %} 
+
+    <table>
+
+        {{ form.as_table }} 
+
+    </table>
+    
+    <input type="submit" value="Guardar">
+
+</form>
+    
+{% endblock contenido %}

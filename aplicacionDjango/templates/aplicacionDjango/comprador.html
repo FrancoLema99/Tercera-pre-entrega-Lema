@@ -1,0 +1,40 @@
+{% extends 'aplicacionDjango/index.html' %}
+
+
+{% block titulo %}
+
+    <h1 class="text-white font-weight-bold">COMPRADORES</h1>
+    
+ {% endblock titulo %}
+
+
+{% block contenido %}
+
+    <h3>Lista de compradores registrados</h3>
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Usuario</th>
+            <th>Mail</th>
+        </tr>    
+    </thead>
+    <tbody>
+
+    {% for c in Compradores %} 
+
+        <tr>
+            <td>{{c.nombre}}</td>
+            <td>{{c.apellido}}</td>
+            <td>{{c.usuario}}</td>
+            <td>{{c.mail}}</td>
+        </tr>
+
+    {% endfor %}
+    </tbody>
+</table> 
+
+    
+{% endblock contenido %}

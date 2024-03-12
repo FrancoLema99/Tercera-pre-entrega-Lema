@@ -1,0 +1,37 @@
+{% extends 'aplicacionDjango/index.html' %}
+
+
+{% block titulo %}
+
+    <h1 class="text-white font-weight-bold">PRODUCTOS</h1>
+
+{% endblock titulo %}
+
+
+
+{% block contenido %}
+
+    <h3>Mira la lista de nuestros productos.</h3>
+
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+        </tr>    
+    </thead>
+    <tbody>
+
+    {% for p in  Productos %} 
+
+        <tr>
+            <td>{{p.nombre_producto}}</td>
+            <td>{{p.precio}}</td>
+        </tr>
+
+    {% endfor %}
+    </tbody>
+</table> 
+{% endblock contenido %}
+    
+    
